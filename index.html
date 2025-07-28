@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websim Live - Real-time Project Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">Websim Live</h1>
+                <div class="user-info">
+                    <img id="user-avatar" class="avatar" alt="Your avatar">
+                    <span id="user-name" class="username">Loading...</span>
+                </div>
+            </div>
+        </header>
+        
+        <div id="workspace" class="workspace">
+            <div class="grid-overlay"></div>
+        </div>
+        
+        <div class="controls">
+            <button id="add-project" class="btn primary">+ Add Project</button>
+            <button id="toggle-grid" class="btn secondary">Toggle Grid</button>
+            <button id="clear-all" class="btn danger">Clear All</button>
+        </div>
+        
+        <div id="project-selector" class="modal hidden">
+            <div class="modal-content">
+                <h2>Select a Project</h2>
+                <div id="project-list" class="project-grid"></div>
+                <button class="close-modal">×</button>
+            </div>
+        </div>
+        
+        <div id="user-cursors"></div>
+    </div>
+    
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "nipplejs": "https://esm.sh/nipplejs@0.10.1"
+        }
+    }
+    </script>
+    <script type="module" src="main.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+
